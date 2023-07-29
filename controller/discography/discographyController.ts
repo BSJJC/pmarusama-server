@@ -28,8 +28,8 @@ export const createDiscography = asyncHandler(async (req: Request, res: Response
 
     res.status(200).json(topicInfo);
   } catch (error) {
-    res.status(400).send("error when create new topic");
-    throw new Error("error when create new topic");
+    res.status(400).send("error when create new discography");
+    throw new Error("error when create new discography");
   }
 });
 
@@ -39,7 +39,7 @@ export const createDiscography = asyncHandler(async (req: Request, res: Response
  * @access                              Public
  */
 export const getDiscography = asyncHandler(async (req: Request, res: Response) => {
-  const topics = await DiscographyModel.find().sort({ _id: 1 }).limit(20);
+  // const topics = await DiscographyModel.find().sort({ _id: 1 }).limit(20);
 
-  res.status(200).send(topics);
+  res.status(200).send("OK");
 });
