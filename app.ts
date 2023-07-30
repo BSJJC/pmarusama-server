@@ -5,7 +5,8 @@ import cors from "cors";
 import connectDB from "./config/db";
 dotenv.config();
 
-import discographyRouter from "./router/discography/discographyRouter";
+import discographyRouter from "./router/discographyRouter";
+import discographyCoverRouter from "./router/discographyCoverRouter";
 
 connectDB();
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors({ origin: "*" }));
 
 app.use("/api/discography", discographyRouter);
+app.use("/api/discographyCover", discographyCoverRouter);
 
 app.listen(port, () => {
   console.log(

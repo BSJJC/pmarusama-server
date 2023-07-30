@@ -3,7 +3,7 @@ import { Router } from "express";
 import {
   createDiscography,
   getDiscography,
-} from "../../controller/discography/discographyController";
+} from "../controller/discographyController";
 
 const discographyRouter = Router()
 

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
 
-import DiscographyModel from "../../model/discography/discography";
+import DiscographyModel from "../model/discography";
 
 /**
  * @description            Create new discography info
