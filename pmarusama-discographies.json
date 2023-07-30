@@ -2,7 +2,7 @@
   {
     "releaseDate": "2022-09-28",
     "name": "2nd フルアルバム「ラブホリック」",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617acac62f600826097cb",
     "stprLink": "https://stpr.lnk.to/Pmarusama_Love_Holic",
     "songs": [
       {
@@ -70,7 +70,7 @@
   {
     "releaseDate": "2022-08-31",
     "name": "おちゃめ機能",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617ba87f5bb039dc1ad44",
     "stprLink": "https://stpr.lnk.to/Pmarusama_OchameKinou",
     "songs": [
       {
@@ -82,7 +82,7 @@
   {
     "releaseDate": "2022-08-31",
     "name": "アスノヨゾラ哨戒班",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617c82ce1edc07f695ad4",
     "stprLink": "https://stpr.lnk.to/Pmarusama_NightSkyPatrolofTomorrow",
     "songs": [
       {
@@ -94,7 +94,7 @@
   {
     "releaseDate": "2022-08-20",
     "name": "シャットダウン",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617d4481a16c1ed70955f",
     "stprLink": "https://stpr.lnk.to/Pmarusama_Shutdown",
     "songs": [
       {
@@ -106,7 +106,7 @@
   {
     "releaseDate": "2022-07-30",
     "name": "乙女はサイコパス",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617e0219c4ea5b4a4454a",
     "stprLink": "https://stpr.lnk.to/Pmarusama_Psychopathgirl",
     "songs": [
       {
@@ -118,7 +118,7 @@
   {
     "releaseDate": "2022-04-01",
     "name": "MOTTAI",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617ea0d44e5d176937328",
     "stprLink": "https://stpr.lnk.to/Pmarusama_MOTTAI",
     "songs": [
       {
@@ -130,7 +130,7 @@
   {
     "releaseDate": "2021-12-10",
     "name": "ちきゅう大爆発",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c617f686341848c88950ce",
     "stprLink": "https://stpr.lnk.to/Pmarusama_ThePlanetBigBang",
     "songs": [
       {
@@ -142,7 +142,7 @@
   {
     "releaseDate": "2021-10-23",
     "name": "ないばいたりてぃ",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c61803e46043f0fcdeaea6",
     "stprLink": "https://stpr.lnk.to/Pmarusama_NaiVitality",
     "songs": [
       {
@@ -153,8 +153,20 @@
   },
   {
     "releaseDate": "2021-08-14",
+    "name": "ときめきブローカー",
+    "coverObjectId": "64c6180e9ed12b31162992ff",
+    "stprLink": "https://stpr.lnk.to/Pmarusama_TokimekiBroker",
+    "songs": [
+      {
+        "name": "ときめきブローカー",
+        "credits": "Artist P丸様。 [P Maru-sama]"
+      }
+    ]
+  },
+  {
+    "releaseDate": "2021-08-14",
     "name": "1stフルアルバム「Sunny!!」",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c61820c8776bb330405062",
     "stprLink": "https://stpr.lnk.to/Pmarusama_Sunny",
     "songs": [
       {
@@ -222,7 +234,7 @@
   {
     "releaseDate": "2021-03-17",
     "name": "ダンスロボットダンス",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c6182e24cbe38ee38ecc03",
     "stprLink": "https://stpr.lnk.to/Pmarusma_DRD",
     "songs": [
       {
@@ -234,7 +246,7 @@
   {
     "releaseDate": "2021-03-17",
     "name": "お願いダーリン",
-    "coverObjectIDs": [],
+    "coverObjectId": "64c6183b32ddeb98c6952f67",
     "stprLink": "https://stpr.lnk.to/Pmarusma_OnegaiDarling",
     "songs": [
       {
