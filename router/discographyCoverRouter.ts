@@ -2,6 +2,7 @@ import { Router } from "express";
 import multer from "multer";
 import {
   createDiscographyCover,
+  getDiscographyCover
 } from "../controller/discographyCoverController";
 
 const discographyCoverRouter = Router()
@@ -11,5 +12,10 @@ discographyCoverRouter.post(
   "/create",
   upload.single("discographyCover"),
   createDiscographyCover);
+
+discographyCoverRouter.get(
+  "/:objectId",
+  getDiscographyCover
+)
 
 export default discographyCoverRouter;

@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
 import DiscographyCoverModel from "../model/discographyCover";
+import { ObjectId } from "mongodb";
 
 /**
  * @description            Create new discography cover
@@ -26,3 +27,24 @@ export const createDiscographyCover = asyncHandler(async (req: Request, res: Res
     throw new Error("error when create new discography cover");
   }
 });
+
+
+/**
+ * @description         Find and send discography cover data
+ * @route                     GET  /api/discography/:objectId
+ * @access                 Public
+ */
+export const getDiscographyCover = asyncHandler(
+  async (req: Request, res: Response) => {
+    const objectId = req.params.objectId
+
+    const data = await DiscographyCoverModel.findOne({ _id: new ObjectId(objectId) })
+
+    if (!data) {
+      res.status(404).send("No cover data found");
+      return;
+    }
+
+    res.status(200).send(data.coverData.toString("base64"))
+  }
+)
