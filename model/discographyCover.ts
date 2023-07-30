@@ -1,17 +1,12 @@
 import { Schema, model, Document } from "mongoose";
 
 interface IDiscographyCover extends Document {
-  name: string,
-  base64string: string
+  coverData: Buffer,
 }
 
 const discographyCoverModelSchema = new Schema<IDiscographyCover>({
-  name: {
-    type: String,
-    required: true
-  },
-  base64string: {
-    type: String,
+  coverData: {
+    type: Buffer,
     required: true
   }
 });
