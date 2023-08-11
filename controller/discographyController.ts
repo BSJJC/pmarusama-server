@@ -40,7 +40,9 @@ export const createDiscography = asyncHandler(async (req: Request, res: Response
  */
 export const getDiscography = asyncHandler(async (req: Request, res: Response) => {
   const discographies = await DiscographyModel
-    .find();
+    .find()
+    .limit(12)
+    .sort({ releaseDate: -1 })
 
   res.status(200).json({ discographies });
 });
