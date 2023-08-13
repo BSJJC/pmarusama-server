@@ -5,8 +5,8 @@ import cors from "cors";
 import connectDB from "./config/db";
 dotenv.config();
 
-import discographyRouter from "./router/discographyRouter";
-import discographyCoverRouter from "./router/discographyCoverRouter";
+import discographyRouter from "./router/discography/discographyRouter";
+import discographyCoverRouter from "./router/discography/discographyCoverRouter";
 
 connectDB();
 

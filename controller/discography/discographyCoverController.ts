@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
-import DiscographyCoverModel from "../model/discographyCover";
+import DiscographyCoverModel from "../../model/discography/discographyCover";
 import { ObjectId } from "mongodb";
 
 /**

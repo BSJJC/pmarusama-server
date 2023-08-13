@@ -3,7 +3,7 @@ import multer from "multer";
 import {
   createDiscographyCover,
   getDiscographyCover
-} from "../controller/discographyCoverController";
+} from "../../controller/discography/discographyCoverController";
 
 const discographyCoverRouter = Router()
 const upload = multer();
