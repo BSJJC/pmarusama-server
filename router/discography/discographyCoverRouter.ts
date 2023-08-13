@@ -11,7 +11,8 @@ const upload = multer();
 discographyCoverRouter.post(
   "/create",
   upload.single("discographyCover"),
-  createDiscographyCover);
+  createDiscographyCover
+);
 
 discographyCoverRouter.get(
   "/:objectId",

@@ -8,6 +8,9 @@ dotenv.config();
 import discographyRouter from "./router/discography/discographyRouter";
 import discographyCoverRouter from "./router/discography/discographyCoverRouter";
 
+import socialMediaRouter from "./router/socialMedia/socialMediaRouter";
+import socialMediaImgRouter from "./router/socialMedia/socialMediaImgRouter"
+
 connectDB();
 
 const port: number = (process.env.PORT as unknown as number) || 5000;
@@ -19,6 +22,9 @@ app.use(cors({ origin: "*" }));
 
 app.use("/api/discography", discographyRouter);
 app.use("/api/discographyCover", discographyCoverRouter);
+
+app.use("/api/socialMedia", socialMediaRouter)
+app.use("/api/socialMediaImg", socialMediaImgRouter)
 
 app.listen(port, () => {
   console.log(

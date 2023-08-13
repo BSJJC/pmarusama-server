@@ -34,17 +34,17 @@ export const createDiscographyCover = asyncHandler(async (req: Request, res: Res
  * @route                     GET  /api/discography/:objectId
  * @access                 Public
  */
-export const getDiscographyCover = asyncHandler(
-  async (req: Request, res: Response) => {
-    const objectId = req.params.objectId
+export const getDiscographyCover = asyncHandler(async (req: Request, res: Response) => {
+  const objectId = req.params.objectId
 
-    const data = await DiscographyCoverModel.findOne({ _id: new ObjectId(objectId) })
+  const data = await DiscographyCoverModel
+    .findOne({ _id: new ObjectId(objectId) })
 
-    if (!data) {
-      res.status(404).send("No cover data found");
-      return;
-    }
-
-    res.status(200).send(data.coverData.toString("base64"))
+  if (!data) {
+    res.status(404).send("No cover data found");
+    return;
   }
+
+  res.status(200).send(data.coverData.toString("base64"))
+}
 )
