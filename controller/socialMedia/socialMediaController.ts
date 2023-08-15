@@ -11,7 +11,8 @@ export const createSocialMedia = asyncHandler(async (req: Request, res: Response
   try {
     const {
       name,
-      imgID
+      imgID,
+      url
     } = req.body;
 
     if (!name) {
@@ -26,7 +27,8 @@ export const createSocialMedia = asyncHandler(async (req: Request, res: Response
 
     const SocialMedia = await SocialMediaModel.create({
       name,
-      imgID
+      imgID,
+      url
     });
 
     res.status(200).json(SocialMedia);

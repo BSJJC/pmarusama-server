@@ -38,7 +38,6 @@ export const createSocialMediaImg = asyncHandler(async (req: Request, res: Respo
 export const getSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
   const objectId = req.params.objectId
   
-
   const data = await SocialMediaImgModel
     .findOne({ _id: new ObjectId(objectId) })
 
