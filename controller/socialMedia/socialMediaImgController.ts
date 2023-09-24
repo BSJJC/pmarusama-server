@@ -9,25 +9,25 @@ import { ObjectId } from "mongodb";
  * @access                    Public
  */
 export const createSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
-  try {
-    const file = req?.file;
+    try {
+        const file = req?.file;
 
-    if (!file) {
-      res.status(400).send("No file uploaded");
-      return;
+        if (!file) {
+            res.status(400).send("No file uploaded");
+            return;
+        }
+
+        const imageBuffer = req.file!.buffer;
+
+        const SocialMedia = await SocialMediaImgModel.create({
+            imageData: imageBuffer
+        });
+
+        res.status(200).json(SocialMedia);
+    } catch (error) {
+        res.status(400).send("error when create new social media image");
+        throw new Error("error when create new social media image");
     }
-
-    const imageBuffer = req.file!.buffer;
-
-    const SocialMedia = await SocialMediaImgModel.create({
-      imageData: imageBuffer
-    });
-
-    res.status(200).json(SocialMedia);
-  } catch (error) {
-    res.status(400).send("error when create new social media image");
-    throw new Error("error when create new social media image");
-  }
 });
 
 /**
@@ -36,15 +36,15 @@ export const createSocialMediaImg = asyncHandler(async (req: Request, res: Respo
  * @access                              Public
  */
 export const getSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
-  const objectId = req.params.objectId
-  
-  const data = await SocialMediaImgModel
-    .findOne({ _id: new ObjectId(objectId) })
+    const objectId = req.params.objectId
 
-  if (!data) {
-    res.status(404).send("No social media image found");
-    return;
-  }
+    const data = await SocialMediaImgModel
+        .findOne({ _id: new ObjectId(objectId) })
 
-  res.status(200).send(data.imageData.toString("base64"))
+    if (!data) {
+        res.status(404).send("No social media image found");
+        return;
+    }
+
+    res.status(200).send(data.imageData)
 });
