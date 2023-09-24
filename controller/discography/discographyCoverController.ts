@@ -45,6 +45,6 @@ export const getDiscographyCover = asyncHandler(async (req: Request, res: Respon
     return;
   }
 
-  res.status(200).send(data.coverData.toString("base64"))
+  res.status(200).send(data.coverData)
 }
 )
