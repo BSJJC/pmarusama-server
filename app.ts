@@ -28,7 +28,7 @@ app.use('/api/discographyCover', discographyCoverRouter);
 app.use('/api/socialMedia', socialMediaRouter);
 app.use('/api/socialMediaImg', socialMediaImgRouter);
 
-app.use('api/infomation', infomationRouter);
+app.use('/api/infomation', infomationRouter);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`.cyan.underline);
