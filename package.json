@@ -28,6 +28,7 @@
         "concurrently": "^7.6.0",
         "cors": "^2.8.5",
         "husky": "^8.0.3",
+        "lint-staged": "^14.0.1",
         "mongoose": "^7.0.4",
         "nodemon": "^2.0.22",
         "prettier": "^3.0.3",
