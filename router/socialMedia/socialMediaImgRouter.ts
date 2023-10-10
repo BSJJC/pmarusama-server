@@ -3,12 +3,11 @@ import multer from "multer";
 
 import {
   createSocialMediaImg,
-  getSocialMediaImg
-}
-  from "../../controller/socialMedia/socialMediaImgController"
+  getSocialMediaImg,
+} from "../../controller/socialMedia/socialMediaImgController";
 
-const socialMediaImgRouter = Router()
-const upload = multer()
+const socialMediaImgRouter = Router();
+const upload = multer();
 
 socialMediaImgRouter.post(
   "/create",
@@ -16,9 +15,6 @@ socialMediaImgRouter.post(
   createSocialMediaImg
 );
 
-socialMediaImgRouter.get(
-  "/:objectId",
-  getSocialMediaImg
-);
+socialMediaImgRouter.get("/:objectId", getSocialMediaImg);
 
 export default socialMediaImgRouter;

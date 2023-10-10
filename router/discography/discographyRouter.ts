@@ -5,7 +5,7 @@ import {
   getDiscography,
 } from "../../controller/discography/discographyController";
 
-const discographyRouter = Router()
+const discographyRouter = Router();
 
 discographyRouter.post("/create", createDiscography);
 discographyRouter.get("/get", getDiscography);

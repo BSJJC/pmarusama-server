@@ -9,7 +9,7 @@ import discographyRouter from "./router/discography/discographyRouter";
 import discographyCoverRouter from "./router/discography/discographyCoverRouter";
 
 import socialMediaRouter from "./router/socialMedia/socialMediaRouter";
-import socialMediaImgRouter from "./router/socialMedia/socialMediaImgRouter"
+import socialMediaImgRouter from "./router/socialMedia/socialMediaImgRouter";
 
 connectDB();
 
@@ -23,8 +23,8 @@ app.use(cors({ origin: "*" }));
 app.use("/api/discography", discographyRouter);
 app.use("/api/discographyCover", discographyCoverRouter);
 
-app.use("/api/socialMedia", socialMediaRouter)
-app.use("/api/socialMediaImg", socialMediaImgRouter)
+app.use("/api/socialMedia", socialMediaRouter);
+app.use("/api/socialMediaImg", socialMediaImgRouter);
 
 app.listen(port, () => {
   console.log(

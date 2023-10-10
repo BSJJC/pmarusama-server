@@ -1,16 +1,19 @@
 import { Schema, model, Document } from "mongoose";
 
 interface ISocialMediaImg extends Document {
-  imageData: Buffer,
+  imageData: Buffer;
 }
 
 const socialMediaImgSchema = new Schema<ISocialMediaImg>({
   imageData: {
     type: Buffer,
-    required: true
-  }
+    required: true,
+  },
 });
 
-const SocialMediaImgModel = model<ISocialMediaImg>("socialMediaImg", socialMediaImgSchema);
+const SocialMediaImgModel = model<ISocialMediaImg>(
+  "socialMediaImg",
+  socialMediaImgSchema
+);
 
 export default SocialMediaImgModel;
