@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+pnpm prettier --write 'app.ts'
+pnpm prettier --write 'config\*.ts'
 pnpm prettier --write '{controller,model,router}\**\*.ts'
-# pnpm prettier --write 'model\**\*.ts'
-# pnpm prettier --write 'router\**\*.ts'
 git add .
