@@ -11,6 +11,8 @@ import discographyCoverRouter from "./router/discography/discographyCoverRouter"
 import socialMediaRouter from "./router/socialMedia/socialMediaRouter";
 import socialMediaImgRouter from "./router/socialMedia/socialMediaImgRouter";
 
+import infomationRouter from "./router/infomaton/infomationRouter";
+
 connectDB();
 
 const port: number = (process.env.PORT as unknown as number) || 5000;
@@ -25,6 +27,8 @@ app.use("/api/discographyCover", discographyCoverRouter);
 
 app.use("/api/socialMedia", socialMediaRouter);
 app.use("/api/socialMediaImg", socialMediaImgRouter);
+
+app.use("api/infomation", infomationRouter);
 
 app.listen(port, () => {
   console.log(
