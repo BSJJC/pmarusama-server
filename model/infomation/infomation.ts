@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document } from 'mongoose';
 
 interface IInfomation extends Document {
   text: string;
@@ -11,6 +11,6 @@ const infomationModelSchema = new Schema<IInfomation>({
   },
 });
 
-const InfomationModel = model<IInfomation>("Infomaton", infomationModelSchema);
+const InfomationModel = model<IInfomation>('Infomaton', infomationModelSchema);
 
 export default InfomationModel;

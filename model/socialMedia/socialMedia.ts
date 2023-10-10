@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document } from 'mongoose';
 
 interface ISocialMedia extends Document {
   name: string;
@@ -21,6 +21,6 @@ const socialMediaSchema = new Schema<ISocialMedia>({
   },
 });
 
-const SocialMediaModel = model<ISocialMedia>("socialMedia", socialMediaSchema);
+const SocialMediaModel = model<ISocialMedia>('socialMedia', socialMediaSchema);
 
 export default SocialMediaModel;

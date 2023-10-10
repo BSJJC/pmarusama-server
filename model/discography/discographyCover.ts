@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document } from 'mongoose';
 
 interface IDiscographyCover extends Document {
   coverData: Buffer;
@@ -11,9 +11,6 @@ const discographyCoverModelSchema = new Schema<IDiscographyCover>({
   },
 });
 
-const DiscographyCoverModel = model<IDiscographyCover>(
-  "DiscographyCover",
-  discographyCoverModelSchema
-);
+const DiscographyCoverModel = model<IDiscographyCover>('DiscographyCover', discographyCoverModelSchema);
 
 export default DiscographyCoverModel;

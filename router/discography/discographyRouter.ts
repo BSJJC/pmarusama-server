@@ -1,13 +1,10 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-import {
-  createDiscography,
-  getDiscography,
-} from "../../controller/discography/discographyController";
+import { createDiscography, getDiscography } from '../../controller/discography/discographyController';
 
 const discographyRouter = Router();
 
-discographyRouter.post("/create", createDiscography);
-discographyRouter.get("/get", getDiscography);
+discographyRouter.post('/create', createDiscography);
+discographyRouter.get('/get', getDiscography);
 
 export default discographyRouter;

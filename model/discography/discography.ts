@@ -1,4 +1,4 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document } from 'mongoose';
 
 interface ISong {
   name: string;
@@ -36,9 +36,6 @@ const discographyModelSchema = new Schema<IDiscography>({
   },
 });
 
-const DiscographyModel = model<IDiscography>(
-  "Discography",
-  discographyModelSchema
-);
+const DiscographyModel = model<IDiscography>('Discography', discographyModelSchema);
 
 export default DiscographyModel;

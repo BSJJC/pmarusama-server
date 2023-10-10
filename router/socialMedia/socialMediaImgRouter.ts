@@ -1,20 +1,13 @@
-import { Router } from "express";
-import multer from "multer";
+import { Router } from 'express';
+import multer from 'multer';
 
-import {
-  createSocialMediaImg,
-  getSocialMediaImg,
-} from "../../controller/socialMedia/socialMediaImgController";
+import { createSocialMediaImg, getSocialMediaImg } from '../../controller/socialMedia/socialMediaImgController';
 
 const socialMediaImgRouter = Router();
 const upload = multer();
 
-socialMediaImgRouter.post(
-  "/create",
-  upload.single("socialMediaImg"),
-  createSocialMediaImg
-);
+socialMediaImgRouter.post('/create', upload.single('socialMediaImg'), createSocialMediaImg);
 
-socialMediaImgRouter.get("/:objectId", getSocialMediaImg);
+socialMediaImgRouter.get('/:objectId', getSocialMediaImg);
 
 export default socialMediaImgRouter;
