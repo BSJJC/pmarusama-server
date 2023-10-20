@@ -9,9 +9,11 @@ import informationModel from '../../model/information/information';
  */
 export const createInformation = asyncHandler(async (req: Request, res: Response) => {
   try {
-    const { text } = req.body;
+    const { date, title, text } = req.body;
 
     const newinformation = await informationModel.create({
+      date,
+      title,
       text,
     });
 
