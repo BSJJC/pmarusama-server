@@ -11,7 +11,7 @@ import discographyCoverRouter from './router/discography/discographyCoverRouter'
 import socialMediaRouter from './router/socialMedia/socialMediaRouter';
 import socialMediaImgRouter from './router/socialMedia/socialMediaImgRouter';
 
-import infomationRouter from './router/infomaton/infomationRouter';
+import informationRouter from './router/informaton/informationRouter';
 
 connectDB();
 
@@ -28,7 +28,7 @@ app.use('/api/discographyCover', discographyCoverRouter);
 app.use('/api/socialMedia', socialMediaRouter);
 app.use('/api/socialMediaImg', socialMediaImgRouter);
 
-app.use('/api/infomation', infomationRouter);
+app.use('/api/information', informationRouter);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`.cyan.underline);
