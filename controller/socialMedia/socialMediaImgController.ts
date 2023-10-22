@@ -4,9 +4,9 @@ import SocialMediaImgModel from '../../model/socialMedia/socialMediaImgs';
 import { ObjectId } from 'mongodb';
 
 /**
- * @description            Create new social media image
+ * @description                 Create new social media image
  * @route                       POST /api/socialMediaImg/create
- * @access                    Public
+ * @access                      Public
  */
 export const createSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
   try {
@@ -31,9 +31,9 @@ export const createSocialMediaImg = asyncHandler(async (req: Request, res: Respo
 });
 
 /**
- * @description                     Get social media image
- * @route                                 GET /api/socialMediaImg/get
- * @access                              Public
+ * @description                 Get social media image
+ * @route                       GET /api/socialMediaImg/get
+ * @access                      Public
  */
 export const getSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
   const objectId = req.params.objectId;

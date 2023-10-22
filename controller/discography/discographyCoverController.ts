@@ -4,9 +4,9 @@ import DiscographyCoverModel from '../../model/discography/discographyCover';
 import { ObjectId } from 'mongodb';
 
 /**
- * @description            Create new discography cover
+ * @description                 Create new discography cover
  * @route                       POST /api/disgraphyInfo/create
- * @access                    Public
+ * @access                      Public
  */
 export const createDiscographyCover = asyncHandler(async (req: Request, res: Response) => {
   try {
@@ -18,13 +18,14 @@ export const createDiscographyCover = asyncHandler(async (req: Request, res: Res
     }
 
     const imageBuffer = req.file!.buffer;
-    const coverDocument = new DiscographyCoverModel({
+
+    const coverDocument = await DiscographyCoverModel.create({
       coverData: imageBuffer,
     });
-    await coverDocument.save();
 
     res.status(200).json({
       message: 'Discography cover uploaded and saved successfully!',
+      coverDocument,
     });
   } catch (error) {
     res.status(400).send('error when create new discography cover');
@@ -33,9 +34,9 @@ export const createDiscographyCover = asyncHandler(async (req: Request, res: Res
 });
 
 /**
- * @description         Find and send discography cover data
- * @route                     GET  /api/discography/:objectId
- * @access                 Public
+ * @description                 Find and send discography cover data
+ * @route                       GET  /api/discography/:objectId
+ * @access                      Public
  */
 export const getDiscographyCover = asyncHandler(async (req: Request, res: Response) => {
   const objectId = req.params.objectId;
