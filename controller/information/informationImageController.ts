@@ -17,9 +17,11 @@ export const createInformationImage = asyncHandler(async (req: Request, res: Res
       return;
     }
 
+    const { name } = req.body;
     const imageBuffer = req.file!.buffer;
 
     const informationImage = await InformationImageModel.create({
+      name,
       imageBuffer,
     });
 
