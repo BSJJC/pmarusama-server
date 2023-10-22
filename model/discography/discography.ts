@@ -1,19 +1,19 @@
 import { Schema, model, Document } from 'mongoose';
 
-interface ISong {
+type TSong = {
   name: string;
   credits: string;
-}
+};
 
-interface IDiscography extends Document {
+type TDiscography = Document & {
   releaseDate: string;
   name: string;
   coverObjectIDs: string[];
   stprLink: string;
-  songs: ISong[];
-}
+  songs: TSong[];
+};
 
-const discographyModelSchema = new Schema<IDiscography>({
+const discographyModelSchema = new Schema<TDiscography>({
   releaseDate: {
     type: String,
     required: true,
@@ -31,11 +31,11 @@ const discographyModelSchema = new Schema<IDiscography>({
     required: true,
   },
   songs: {
-    type: [] as ISong[],
+    type: [] as TSong[],
     required: true,
   },
 });
 
-const DiscographyModel = model<IDiscography>('Discography', discographyModelSchema);
+const DiscographyModel = model<TDiscography>('Discography', discographyModelSchema);
 
 export default DiscographyModel;

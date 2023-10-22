@@ -1,12 +1,12 @@
 import { Schema, model, Document } from 'mongoose';
 
-interface Iinformation extends Document {
+type Tinformation = Document & {
   date: string;
   title: string;
   text: string;
-}
+};
 
-const informationModelSchema = new Schema<Iinformation>({
+const informationModelSchema = new Schema<Tinformation>({
   date: {
     type: String,
     required: true,
@@ -21,6 +21,6 @@ const informationModelSchema = new Schema<Iinformation>({
   },
 });
 
-const informationModel = model<Iinformation>('information', informationModelSchema);
+const informationModel = model<Tinformation>('information', informationModelSchema);
 
 export default informationModel;

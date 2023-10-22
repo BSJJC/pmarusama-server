@@ -49,5 +49,5 @@ export const getDiscographyCover = asyncHandler(async (req: Request, res: Respon
     return;
   }
 
-  res.status(200).send(data.coverData);
+  res.status(200).send(data.coverBuffer);
 });

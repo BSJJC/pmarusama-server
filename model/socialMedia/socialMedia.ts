@@ -1,12 +1,12 @@
 import { Schema, model, Document } from 'mongoose';
 
-interface ISocialMedia extends Document {
+type TSocialMedia = Document & {
   name: string;
   imgID: string;
   url: string;
-}
+};
 
-const socialMediaSchema = new Schema<ISocialMedia>({
+const socialMediaSchema = new Schema<TSocialMedia>({
   name: {
     type: String,
     required: true,
@@ -21,6 +21,6 @@ const socialMediaSchema = new Schema<ISocialMedia>({
   },
 });
 
-const SocialMediaModel = model<ISocialMedia>('socialMedia', socialMediaSchema);
+const SocialMediaModel = model<TSocialMedia>('socialMedia', socialMediaSchema);
 
 export default SocialMediaModel;

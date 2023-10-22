@@ -21,5 +21,5 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   plugins: ['@typescript-eslint'],
-  rules: {},
+  rules: { '@typescript-eslint/consistent-type-definitions': ['error', 'type'] },
 };
