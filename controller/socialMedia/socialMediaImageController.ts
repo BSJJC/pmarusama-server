@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import asyncHandler from 'express-async-handler';
-import SocialMediaImgModel from '../../model/socialMedia/socialMediaImgs';
+import SocialMediaImageModel from '../../model/socialMedia/socialMediaImage';
 import { ObjectId } from 'mongodb';
 
 /**
@@ -8,7 +8,7 @@ import { ObjectId } from 'mongodb';
  * @route                       POST /api/socialMediaImg/create
  * @access                      Public
  */
-export const createSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
+export const createSocialMediaImage = asyncHandler(async (req: Request, res: Response) => {
   try {
     const file = req?.file;
 
@@ -19,11 +19,11 @@ export const createSocialMediaImg = asyncHandler(async (req: Request, res: Respo
 
     const imageBuffer = req.file!.buffer;
 
-    const SocialMedia = await SocialMediaImgModel.create({
-      imageData: imageBuffer,
+    const SocialMediaImage = await SocialMediaImageModel.create({
+      imageBuffer,
     });
 
-    res.status(200).json(SocialMedia);
+    res.status(200).json(SocialMediaImage);
   } catch (error) {
     res.status(400).send('error when create new social media image');
     throw new Error('error when create new social media image');
@@ -35,10 +35,10 @@ export const createSocialMediaImg = asyncHandler(async (req: Request, res: Respo
  * @route                       GET /api/socialMediaImg/get
  * @access                      Public
  */
-export const getSocialMediaImg = asyncHandler(async (req: Request, res: Response) => {
+export const getSocialMediaImage = asyncHandler(async (req: Request, res: Response) => {
   const objectId = req.params.objectId;
 
-  const data = await SocialMediaImgModel.findOne({
+  const data = await SocialMediaImageModel.findOne({
     _id: new ObjectId(objectId),
   });
 
@@ -47,5 +47,5 @@ export const getSocialMediaImg = asyncHandler(async (req: Request, res: Response
     return;
   }
 
-  res.status(200).send(data.imageData);
+  res.status(200).send(data.imageBuffer);
 });
