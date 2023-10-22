@@ -3,9 +3,9 @@ import asyncHandler from 'express-async-handler';
 import SocialMediaModel from '../../model/socialMedia/socialMedia';
 
 /**
- * @description            Create new social media
+ * @description                 Create new social media
  * @route                       POST /api/socialMedia/create
- * @access                    Public
+ * @access                      Public
  */
 export const createSocialMedia = asyncHandler(async (req: Request, res: Response) => {
   try {
@@ -35,9 +35,9 @@ export const createSocialMedia = asyncHandler(async (req: Request, res: Response
 });
 
 /**
- * @description                     Get social media
- * @route                                 GET /api/socialMedia/get
- * @access                              Public
+ * @description                 Get social media
+ * @route                       GET /api/socialMedia/get
+ * @access                      Public
  */
 export const getSocialMedia = asyncHandler(async (req: Request, res: Response) => {
   const socialMedias = await SocialMediaModel.find();

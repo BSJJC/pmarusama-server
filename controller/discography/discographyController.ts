@@ -3,9 +3,9 @@ import asyncHandler from 'express-async-handler';
 import DiscographyModel from '../../model/discography/discography';
 
 /**
- * @description            Create new discography info
+ * @description                 Create new discography info
  * @route                       POST /api/disgraphy/create
- * @access                    Public
+ * @access                      Public
  */
 export const createDiscography = asyncHandler(async (req: Request, res: Response) => {
   try {
@@ -27,9 +27,9 @@ export const createDiscography = asyncHandler(async (req: Request, res: Response
 });
 
 /**
- * @description                     Get discography
- * @route                                 GET /api/disgraphy/get
- * @access                              Public
+ * @description                 Get discography
+ * @route                       GET /api/disgraphy/get
+ * @access                      Public
  */
 export const getDiscography = asyncHandler(async (req: Request, res: Response) => {
   const discographies = await DiscographyModel.find().limit(12).sort({ releaseDate: -1 });

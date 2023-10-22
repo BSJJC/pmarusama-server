@@ -3,9 +3,9 @@ import asyncHandler from 'express-async-handler';
 import informationModel from '../../model/information/information';
 
 /**
- * @description             Create new information
- * @route                   POST /api/information/create
- * @access                  Public
+ * @description                 Create new information
+ * @route                       POST /api/information/create
+ * @access                      Public
  */
 export const createInformation = asyncHandler(async (req: Request, res: Response) => {
   try {
@@ -25,9 +25,9 @@ export const createInformation = asyncHandler(async (req: Request, res: Response
 });
 
 /**
- * @description             Get informations
- * @route                   GET /api/information/get
- * @access                  Public
+ * @description                 Get informations
+ * @route                       GET /api/information/get
+ * @access                      Public
  */
 export const getInformation = asyncHandler(async (req: Request, res: Response) => {
   const informations = await informationModel.find().limit(12).sort({ releaseDate: -1 });
