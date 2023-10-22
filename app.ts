@@ -12,6 +12,7 @@ import socialMediaRouter from './router/socialMedia/socialMediaRouter';
 import socialMediaImageRouter from './router/socialMedia/socialMediaImageRouter';
 
 import informationRouter from './router/informaton/informationRouter';
+import informationImageRouter from './router/informaton/informationImagerouter';
 
 connectDB();
 
@@ -29,6 +30,7 @@ app.use('/api/socialMedia', socialMediaRouter);
 app.use('/api/socialMediaImage', socialMediaImageRouter);
 
 app.use('/api/information', informationRouter);
+app.use('/api/informationImage', informationImageRouter);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`.cyan.underline);
