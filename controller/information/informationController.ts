@@ -29,7 +29,7 @@ export const createInformation = asyncHandler(async (req: Request, res: Response
  * @access                      Public
  */
 export const getInformation = asyncHandler(async (req: Request, res: Response) => {
-  const informations = await informationModel.find().limit(12).sort({ releaseDate: -1 });
+  const informations = await informationModel.find().sort({ date: -1 });
 
   res.status(200).json({ informations });
 });

@@ -1,13 +1,13 @@
 import { Schema, model, Document } from 'mongoose';
 
 type Tinformation = Document & {
-  date: string;
+  date: number;
   title: string;
 };
 
 const informationModelSchema = new Schema<Tinformation>({
   date: {
-    type: String,
+    type: Number,
     required: true,
   },
   title: {
