@@ -1,11 +1,11 @@
 import { Schema, model, Document } from 'mongoose';
 
-type Tinformation = Document & {
+type TInformation = Document & {
   date: number;
   title: string;
 };
 
-const informationModelSchema = new Schema<Tinformation>({
+const informationModelSchema = new Schema<TInformation>({
   date: {
     type: Number,
     required: true,
@@ -16,6 +16,6 @@ const informationModelSchema = new Schema<Tinformation>({
   },
 });
 
-const informationModel = model<Tinformation>('information', informationModelSchema);
+const informationModel = model<TInformation>('information', informationModelSchema);
 
 export default informationModel;
