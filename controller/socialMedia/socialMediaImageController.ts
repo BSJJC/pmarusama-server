@@ -32,7 +32,7 @@ export const createSocialMediaImage = asyncHandler(async (req: Request, res: Res
 
 /**
  * @description                 Get social media image
- * @route                       GET /api/socialMediaImg/get
+ * @route                       GET /api/socialMediaImg/get/:objectId
  * @access                      Public
  */
 export const getSocialMediaImage = asyncHandler(async (req: Request, res: Response) => {
