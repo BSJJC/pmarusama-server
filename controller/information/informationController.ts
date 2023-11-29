@@ -26,12 +26,27 @@ export const createInformation = asyncHandler(async (req: Request, res: Response
 });
 
 /**
- * @description                 Get informations
- * @route                       GET /api/information/get
+ * @description                 Get informations list, but only date, title and informationType of each information
+ * @route                       GET /api/informationList/get
  * @access                      Public
  */
-export const getInformation = asyncHandler(async (req: Request, res: Response) => {
-  const informations = await informationModel.find().sort({ date: -1 });
+export const getInformationList = asyncHandler(async (req: Request, res: Response) => {
+  const page: number = req.body.page;
+
+  const informations = await informationModel
+    .find()
+    .sort({ date: -1 })
+    .skip(10 * page)
+    .limit(10)
+    .select('date title informationType');
 
   res.status(200).json({ informations });
+});
+
+export const getInformationDetail = asyncHandler(async (req: Request, res: Response) => {
+  const { date } = req.params;
+
+  const data = await informationModel.findOne({ date }).select('data');
+
+  res.status(200).json(data);
 });
