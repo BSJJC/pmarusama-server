@@ -33,7 +33,7 @@ export const createInformationImage = asyncHandler(async (req: Request, res: Res
 
 /**
  * @description                 Get information image
- * @route                       GET /api/informationImg/get/:imageID
+ * @route                       GET /api/informationImg/:imageID
  * @access                      Public
  */
 export const getInformationImage = asyncHandler(async (req: Request, res: Response) => {
