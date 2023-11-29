@@ -30,7 +30,7 @@ app.use('/api/socialMedia', socialMediaRouter);
 app.use('/api/socialMediaImage', socialMediaImageRouter);
 
 app.use('/api/information', informationRouter);
-app.use('/api/informationImg', informationImageRouter);
+app.use('/api/informationImage', informationImageRouter);
 
 app.listen(port, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${port}`.cyan.underline);
