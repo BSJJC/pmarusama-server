@@ -11,14 +11,14 @@ export const createInformation = asyncHandler(async (req: Request, res: Response
   try {
     const { date, title, informationType, data } = req.body;
 
-    const newinformation = await informationModel.create({
+    const newInformation = await informationModel.create({
       date,
       title,
       informationType,
       data,
     });
 
-    res.status(200).json(newinformation);
+    res.status(200).json(newInformation);
   } catch (error) {
     res.status(400).send('error when create new information');
     throw new Error('error when create new information');
