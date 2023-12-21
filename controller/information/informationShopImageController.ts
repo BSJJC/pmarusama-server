@@ -17,7 +17,7 @@ export const createInformationShopImage = asyncHandler(async (req: Request, res:
     }
 
     const imageBuffer = req.file!.buffer;
-    const shopName = req.body.imageID;
+    const shopName = req.body.shopName;
 
     const InformationImage = await InformationShopImageModel.create({
       shopName,
