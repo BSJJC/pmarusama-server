@@ -50,3 +50,19 @@ export const getInformationShopImage = asyncHandler(async (req: Request, res: Re
 
   res.status(200).send(data.imageBuffer);
 });
+
+/**
+ * @description                 Get all information shop images
+ * @route                       GET /api/informationShopImg/getAll
+ * @access                      Public
+ */
+export const getAllInformationShopImages = asyncHandler(async (req: Request, res: Response) => {
+  const data = await InformationShopImageModel.find();
+
+  if (!data) {
+    res.status(404).send('Nsound');
+    return;
+  }
+
+  res.status(200).send(data);
+});
