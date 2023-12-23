@@ -57,7 +57,7 @@ export const getInformationShopImage = asyncHandler(async (req: Request, res: Re
  * @access                      Public
  */
 export const getAllInformationShopImages = asyncHandler(async (req: Request, res: Response) => {
-  const data = await InformationShopImageModel.find();
+  const data = await InformationShopImageModel.find().select('shopName  ');
 
   if (!data) {
     res.status(404).send('Nsound');
