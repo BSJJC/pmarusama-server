@@ -33,7 +33,7 @@ export const createInformationShopImage = asyncHandler(async (req: Request, res:
 
 /**
  * @description                 Get information shop image
- * @route                       GET /api/informationShopImg/:imageID
+ * @route                       GET /api/informationShopImg/:shopName
  * @access                      Public
  */
 export const getInformationShopImage = asyncHandler(async (req: Request, res: Response) => {
@@ -60,9 +60,22 @@ export const getAllInformationShopImages = asyncHandler(async (req: Request, res
   const data = await InformationShopImageModel.find().select('shopName  ');
 
   if (!data) {
-    res.status(404).send('Nsound');
+    res.status(404).send('No information images found');
     return;
   }
 
   res.status(200).send(data);
+});
+
+/**
+ * @description                 Delete information shop images
+ * @route                       DELETE /api/informationShopImg/delete/:shopName
+ * @access                      Public
+ */
+export const delteInformationShopImage = asyncHandler(async (req: Request, res: Response) => {
+  const shopName = req.params.shopName;
+
+  await InformationShopImageModel.deleteOne({ shopName });
+
+  res.status(200).send('shop image deleted');
 });
